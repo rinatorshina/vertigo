@@ -18,6 +18,17 @@ public class SpawnerManager : MonoBehaviour
         int spawnInt = Random.Range(0, StartPoints.Length);
         GameObject Enemy = Instantiate(EnemyPrefab, StartPoints[spawnInt].transform.position, Quaternion.identity);
         Enemy.GetComponent<EnemyMovement>().endPoint = EndPoints[Random.Range(0, EndPoints.Length)];
+
+        Transform[] children = Enemy.GetComponentsInChildren<Transform>();
+
+       // foreach (Transform child in children)
+       // {
+       //    child.gameObject.SetActive(false);
+       // }
+
+        int randomIndex = Random.Range(0, 2);
+        children[randomIndex].gameObject.SetActive(true);
+
     }
 
     private IEnumerator enemyTimer()
