@@ -1,0 +1,5 @@
+C:/Users/karina.torshina/Desktop/app factory/Vertigo/.utmp/RelWithDebInfo/6j3f593h/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/karina.torshina/Desktop/app factory/Vertigo/.utmp/RelWithDebInfo/6j3f593h/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/Users/karina.torshina/Desktop/app factory/Vertigo/.utmp/RelWithDebInfo/6j3f593h/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+C:/Users/karina.torshina/Desktop/app factory/Vertigo/.utmp/RelWithDebInfo/6j3f593h/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/karina.torshina/Desktop/app factory/Vertigo/.utmp/RelWithDebInfo/6j3f593h/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir

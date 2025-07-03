@@ -7,6 +7,7 @@ public class DeleteCollider : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
+            ScoreManager.Instance.AddPoint();
         } 
     }
 }
