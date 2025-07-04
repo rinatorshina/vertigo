@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
         direction = Random.Range(-1, 1);
-        if(direction == 0)
+        if (direction == 0)
         {
             direction = 1;
         }
@@ -86,6 +86,6 @@ public class PlayerControl : MonoBehaviour
 
     }
 
- 
+
 
 }

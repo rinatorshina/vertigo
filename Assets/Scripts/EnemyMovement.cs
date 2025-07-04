@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     [Tooltip("Increase number to reduce speed up")] [SerializeField] private float minSpeedFactor = 10f;
     [Tooltip("Increase number to reduce speed up")][SerializeField] private float maxSpeedFactor = 20f;
 
+    public static bool isPaused = false;
+
     private float currentSpeed;
     private float speedFactor;
 
@@ -20,11 +22,10 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        // TODO: increase currentSpeed over time
-        // currentSpeed = currentSpeed + Time.deltaTime;
         currentSpeed += Time.deltaTime / speedFactor;
 
-        transform.position = Vector3.MoveTowards(transform.position, endPoint.position, currentSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, endPoint.position, currentSpeed * Time.deltaTime);
+
     }
 
     private void OnTriggerEnter(Collider other)

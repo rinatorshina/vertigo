@@ -129,9 +129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 0}
-  startSpeed: 0.04
+  startSpeed: 10
   minSpeedFactor: 10
-  maxSpeedFactor: 100
+  maxSpeedFactor: 201.5
 --- !u!54 &3967377061715593612
 Rigidbody:
   m_ObjectHideFlags: 0

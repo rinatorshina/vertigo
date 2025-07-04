@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class ScoreManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         scoreText.text = "SCORE: " + score.ToString();
@@ -32,10 +35,16 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "SCORE: " + score.ToString();
     }
 
+    private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, LoadSceneMode mode)
+    {
+        scoreText = GameObject.Find("Score")?.GetComponent<TMP_Text>();
+        UpdateScoreText();
+    }
+
     public void AddPoint()
     {
         score += 10;
-        scoreText.text = "SCORE: " + score.ToString();
+        UpdateScoreText();
 
         if (highscore < score)
         {
@@ -43,6 +52,14 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("highscore", highscore);
         }
 
+    }
+
+    private void UpdateScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "SCORE: " + score.ToString();
+        }
     }
 
 }
